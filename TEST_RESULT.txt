@@ -1,0 +1,26 @@
+[컴파일]
+g++ -std=c++17 -Wall -Wextra -pedantic -I. self_test.cpp -o build/ae_self_test
+g++ -std=c++17 -Wall -Wextra -pedantic -I. example_usage.cpp -o build/example_usage
+
+[자체 테스트]
+[통과] +33us 실효 노출시간
+[통과] 첫 Shot Target/Current 계산
+[통과] 두 번째 Shot Secant 계산
+[통과] HDR Short register 계산
+[통과] AR0233 line/us 단위 오사용 방지
+[통과] MCAMv4 실효시간 임계 테이블
+[통과] Code/Register 왕복
+[통과] Fallback 목표 일치 시 유지
+[통과] 빈 Zone 유효 개수 제외
+[통과] WarmStart null 출력 포인터 방어
+[통과] 촬영 실패 시 마지막 Exposure 보존
+
+모든 자체 테스트가 통과했습니다.
+
+[추가 검사]
+-Wall -Wextra -Wconversion -pedantic 컴파일 통과
+UndefinedBehaviorSanitizer 실행 통과
+-Wshadow 추가 경고 검사 통과
+
+[검증 제한]
+현재 환경에 cmake와 CUDA nvcc가 없어 CMake 및 CUDA 실제 컴파일은 확인하지 못했습니다.

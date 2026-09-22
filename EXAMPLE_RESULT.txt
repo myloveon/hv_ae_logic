@@ -1,0 +1,19 @@
+=== MCAMv4 AE readable fixed-point ===
+effective range 43 ~ 104033 us, target 2240
+
+세션 샷 종료사유  씬        ratio 전환      E1     E2   밝기
+1       2 데드밴드수렴 Normal         8    0     440     52     2222
+2       1 데드밴드수렴 Normal         2    0     440    218     2224
+3       1 데드밴드수렴 Normal         2    0     440    218     2224
+4       4 데드밴드수렴 BrightTop      2    1     108     52     2235  <- 장면급변
+5       1 데드밴드수렴 Normal         2    0     108     52     2231
+6       1 데드밴드수렴 Normal         2    0     108     52     2236
+
+    code effective_us     EXPn   deadband     grid
+     108           43        1        13%      YES
+     200           53        2        11%      YES
+     300           93        6         6%      YES
+     400          203       17         2%      YES
+     500          533       50         1%        -
+     700         4383      435         1%        -
+     900        37823     3779         1%        -
